@@ -89,6 +89,9 @@ class MessageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $message = ChatMessage::find($id);
+        $message->delete();
+
+        return redirect()->route('messages.index');
     }
 }
