@@ -14,7 +14,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('messages.index');
+        // dd(ChatMessage::all());
+        return view('messages.index', ['messages' => ChatMessage::all()]);
     }
 
     /**
