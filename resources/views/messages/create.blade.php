@@ -7,6 +7,12 @@
     <title>Create</title>
 </head>
 <body>
-    this is create
+    <h1>Create Message</h1>
+    <form action="{{ route('messages.store') }}" method="POST">
+        @csrf
+        <input class="" id="name" type="text" name="name" value="" placeholder="Enter name"></div>
+        <input class="" id="name" type="textarea" name="content" value="" placeholder="Message"></div>
+        <input class="" type="submit" value="Create">
+
 </body>
 </html>
